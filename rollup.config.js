@@ -6,11 +6,7 @@ import dts from "rollup-plugin-dts";
 //import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
-import { createRequire } from "module"; // Bring in the ability to create the 'require' method
-const require = createRequire(import.meta.url); // construct the require method
-const pkg = require("./package.json") // use the require method
-
-//import pkg from "./package.json" assert { type: 'json' };
+import pkg from "./package.json" assert { type: 'json' };
 
 export default [
   {
