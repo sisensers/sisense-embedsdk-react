@@ -1,0 +1,29 @@
+{
+  "name": "sisense-embedsdk-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "type": "module",
+  "scripts": {
+    "rollup": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run rollup"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.0.37",
+    "react": "^18.2.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "rollup": "^3.20.7",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.5.0"
+  }
+}
