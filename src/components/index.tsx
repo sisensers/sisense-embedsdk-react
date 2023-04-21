@@ -63,7 +63,7 @@ const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbe
 {
     sisenseContainerElement: React.RefObject<HTMLDivElement> = createRef<HTMLDivElement>()
 
-    constructor(props: any) {
+    constructor(props: SisenseDashboardEmbedProps) {
         super(props);
         this.state = {
             currentDashboard: undefined,
