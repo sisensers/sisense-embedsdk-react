@@ -10,8 +10,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run rollup"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sisensers/sisense-embedsdk-react.git"
+  },
+  "author": "Steve Lewis @Sisense",
+  "bugs": {
+    "url": "https://github.com/sisensers/sisense-embedsdk-react/issues"
+  },
+  "homepage": "https://github.com/sisensers/sisense-embedsdk-react#readme",
   "dependencies": {
     "@types/react": "^18.0.37",
     "react": "^18.2.0",
