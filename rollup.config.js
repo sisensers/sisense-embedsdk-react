@@ -18,17 +18,17 @@ export default [
       // ),
       /node_modules/
     ],
-    input: "src/index.ts",
+    input: "./src/index.ts",
     output: [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
-        sourcemap: true,
+        sourcemap: "inline",
       },
       {
         file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: true,
+        sourcemap: "inline",
       },
     ],
     plugins: [
