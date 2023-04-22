@@ -23,12 +23,12 @@ export default [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
-        sourcemap: "inline",
+        sourcemap: true
       },
       {
         file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: "inline",
+        sourcemap: true
       },
     ],
     plugins: [
