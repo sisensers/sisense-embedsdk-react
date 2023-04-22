@@ -5,6 +5,7 @@ import dts from "rollup-plugin-dts";
 
 //import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import { createPathTransform } from 'rollup-sourcemap-path-transform'
 
 export default [
   {
@@ -23,12 +24,22 @@ export default [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
-        sourcemap: false
+        sourcemap: true,
+        sourcemapPathTransform: createPathTransform({
+          prefixes: {
+            '*src/components/': '/sisense-embedsdk-react/'
+          }
+        })
       },
       {
         file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: false
+        sourcemap: true,
+        sourcemapPathTransform: createPathTransform({
+          prefixes: {
+            '*src/components/': '/sisense-embedsdk-react/'
+          }
+        })
       },
     ],
     plugins: [
