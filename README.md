@@ -28,6 +28,8 @@ Other features can be contolled via the component props:
   sisenseUrl={sisenseUrl}
   urlParams={urlParams}
   dashboardId={dashboardId}
+  frameHeight='calc(100vh - 100px)'
+  frameWidth='100%'
   showLeftPane={false}
   showRightPane={true}
   showToolbar={false}
