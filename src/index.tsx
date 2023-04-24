@@ -59,6 +59,18 @@ const setTheme = (themeId: string) => {
     }
 }
 
+const setFrameHeight = (frameHeight: string, frameElement: HTMLDivElement) => {
+        if (frameElement && frameHeight) {
+            frameElement.getElementsByTagName('iframe')[0].style.height = frameHeight
+        }
+}
+
+const setFrameWidth = (frameWidth: string, frameElement: HTMLDivElement) => {
+    if (frameElement && frameWidth) {
+        frameElement.getElementsByTagName('iframe')[0].style.width = frameWidth
+    }
+}
+
 const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbedProps, SisenseDashboardEmbedStates>
 {
     sisenseContainerElement: React.RefObject<HTMLDivElement> = createRef<HTMLDivElement>()
@@ -175,6 +187,16 @@ const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbe
         }
         if (this.props.volatile !== prevProps.volatile) {
             //only possible to delete and recreate sisenseFrame??
+        }
+        if (this.props.frameHeight !== prevProps.frameHeight) {
+            if (this.sisenseContainerElement.current){
+                setFrameHeight(this.props.frameHeight || '', this.sisenseContainerElement.current)
+            }
+        }
+        if (this.props.frameWidth !== prevProps.frameWidth) {
+            if (this.sisenseContainerElement.current){
+                setFrameWidth(this.props.frameWidth || '', this.sisenseContainerElement.current)
+            }
         }
     }
 
