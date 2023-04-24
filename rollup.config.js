@@ -19,27 +19,27 @@ export default [
       // ),
       /node_modules/
     ],
-    input: "./src/index.ts",
+    input: "./src/index.tsx",
     output: [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
         sourcemap: true,
-        sourcemapPathTransform: createPathTransform({
-          prefixes: {
-            '*src/components/': '/sisense-embedsdk-react/'
-          }
-        })
+        // sourcemapPathTransform: createPathTransform({
+        //   prefixes: {
+        //     '*src/components/': '/sisense-embedsdk-react/'
+        //   }
+        // })
       },
       {
         file: "dist/esm/index.js",
         format: "esm",
         sourcemap: true,
-        sourcemapPathTransform: createPathTransform({
-          prefixes: {
-            '*src/components/': '/sisense-embedsdk-react/'
-          }
-        })
+        // sourcemapPathTransform: createPathTransform({
+        //   prefixes: {
+        //     '*src/components/': '/sisense-embedsdk-react/'
+        //   }
+        // })
       },
     ],
     plugins: [
@@ -51,7 +51,7 @@ export default [
     ],
   },
   {
-    input: "dist/esm/types/index.d.ts",
+    input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
 

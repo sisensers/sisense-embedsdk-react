@@ -6,6 +6,7 @@
   "module": "dist/esm/index.js",
   "type": "module",
   "scripts": {
+    "build":"tsc",
     "rollup": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run rollup"

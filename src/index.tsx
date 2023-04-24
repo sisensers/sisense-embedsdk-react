@@ -1,6 +1,6 @@
 import React, { createRef } from 'react';
 
-import { SisenseDashboardSettings, SisenseDashboardEmbedProps, SisenseDashboardEmbedStates } from '../types'
+import { SisenseDashboardSettings, SisenseDashboardEmbedProps, SisenseDashboardEmbedStates } from './embedSdkTypes'
 
 var embedSdk: any
 var sisenseFrame: any
