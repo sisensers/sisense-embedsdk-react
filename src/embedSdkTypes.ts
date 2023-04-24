@@ -8,6 +8,8 @@ export type SisenseDashboardEmbedProps = {
     sisenseUrl: string,
     urlParams?: string,
     dashboardId: string,
+    frameWidth?: string,
+    frameHeight?: string,
     showLeftPane?: boolean,
     showRightPane?: boolean,
     showToolbar?: boolean,

@@ -74,11 +74,13 @@ const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbe
     }
 
     render(): React.ReactNode {
+        let frameHeight = this.props.frameHeight ? this.props.frameHeight : '80vh'
+        let frameWidth = this.props.frameWidth ? this.props.frameWidth : '100%'
         return (
             <div
                 ref={this.sisenseContainerElement}
                 id={sisenseContainerElementId}
-                style={{ height: '80vh' }}
+                style={{ height: frameHeight, width: frameWidth }}
             >
             </div>
         )
@@ -91,10 +93,10 @@ const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbe
             isDashboardEditable: args.dashboard.userAuth.dashboards.toggle_edit_mode
         });
 
-        let containerElement: any = this.sisenseContainerElement.current
-        if (containerElement) {
-            containerElement.getElementsByTagName('iframe')[0].style.height = '80vh'
-        }
+        // let containerElement: any = this.sisenseContainerElement.current
+        // if (containerElement) {
+        //     containerElement.getElementsByTagName('iframe')[0].style.height = '80vh'
+        // }
 
         //call custom onLoaded handler passed into props
         if (this.props.onDashboardLoaded) {
