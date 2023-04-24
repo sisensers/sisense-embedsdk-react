@@ -24,7 +24,7 @@ export default [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
-        sourcemap: true,
+        sourcemap: false,
         // sourcemapPathTransform: createPathTransform({
         //   prefixes: {
         //     '*src/components/': '/sisense-embedsdk-react/'
@@ -34,7 +34,7 @@ export default [
       {
         file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: true,
+        sourcemap: false,
         // sourcemapPathTransform: createPathTransform({
         //   prefixes: {
         //     '*src/components/': '/sisense-embedsdk-react/'
