@@ -6,6 +6,9 @@ Install using npm
 ```
 npm install --save sisensers/sisense-embedsdk-react
 ```
+
+_Alternatively, clone this repo locally and run `npm install` followed by `npm run build`, and use the outputs from the 'dist' folder in your react application._
+
 \
 Import the module into your react application
 ```
