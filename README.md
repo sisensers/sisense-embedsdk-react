@@ -4,7 +4,7 @@ Typescript React component for embedding [Sisense](https://www.sisense.com/platf
 
 Yes, it's true, I _would_ like like web searches for "how to embed Sisense into react" to find this page!
 
-For a live preview of the Sisense React component being used in a sample application, check out [this link](https://sisensers.github.io/sisense-embedsdk-react-sampleapp/)
+For a live preview of the Sisense React component being used in a sample application, check out [this link](https://sisensers.github.io/sisense-embedsdk-react-sampleapp/) or check out the source code [here](https://github.com/sisensers/sisense-embedsdk-react-sampleapp)
 
 ## Using the Sisense Embed SDK component in your react application
 
