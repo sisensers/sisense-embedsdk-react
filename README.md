@@ -1,6 +1,10 @@
-# Getting Started with Sisense EmbedSDK React
+# Getting Started with Sisense Embed SDK React
+Typescript React component for embedding [Sisense](https://www.sisense.com/platform/embedded-analytics/) into a react application, using [Sisense Embed SDK](https://sisense.dev/guides/embedding/embed-sdk.html) as a React Component.
 
-## Using the EmbedSDK component in your application
+
+Yes, it's true, I _would_ like like web searches for "how to embed Sisense into react" to find this page!
+
+## Using the Sisense Embed SDK component in your react application
 
 Install using npm
 ```
