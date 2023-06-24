@@ -1,6 +1,6 @@
 import React, { createRef } from 'react';
 
-import { SisenseDashboardSettings, SisenseDashboardEmbedProps, SisenseDashboardEmbedStates } from './embedSdkTypes'
+import { SisenseDashboardSettings, SisenseDashboardEmbedProps, SisenseDashboardEmbedStates, SisenseJaqlMetadataItem } from './embedSdkTypes'
 
 var embedSdk: any
 var sisenseFrame: any
@@ -70,6 +70,10 @@ const setFrameWidth = (frameWidth: string, frameElement: HTMLDivElement) => {
         frameElement.getElementsByTagName('iframe')[0].style.width = frameWidth
     }
 }
+
+const applyFilter = (filters:[SisenseJaqlMetadataItem | any]) => {
+    sisenseFrame.dashboard.applyFilters(filters);
+};
 
 const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbedProps, SisenseDashboardEmbedStates>
 {
@@ -197,6 +201,9 @@ const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbe
             if (this.sisenseContainerElement.current) {
                 setFrameWidth(this.props.frameWidth || '', this.sisenseContainerElement.current)
             }
+        }
+        if (this.props.filters !== prevProps.filters) {
+            applyFilter(this.props.filters || [undefined]);
         }
     }
 
