@@ -16,6 +16,7 @@ export type SisenseDashboardEmbedProps = {
     editMode?: boolean,
     themeId?: string,
     volatile?: boolean,
+    filters?: [SisenseJaqlMetadataItem | any],
     onDashboardLoaded?: (event: any, args: any) => void
     onDashboardFirstLoaded?: (loadedDashboard: any) => void
     unmountShouldDestroySisenseFrame?: boolean
@@ -49,37 +50,47 @@ export type SisenseJaqlMetadataItem = {
 }
 
 export type SisenseJaqlDimension = {
-        dim: string,
-        filter?: SisenseJaqlFilterItem | any
+    title?: string,
+    datatype?: string,
+    dim: string,
+    filter?: SisenseJaqlFilterItem | any
 }
 
 export type SisenseJaqlDateDimension = {
-        dim: string,
-        level: "years" | "quarters" | "months" | "days" | "hours" | "minutes" | "timestamp" | string
-        filter?: SisenseJaqlFilterItem | any
+    title?: string,
+    datatype?: string,
+    dim: string,
+    level: "years" | "quarters" | "months" | "days" | "hours" | "minutes" | "timestamp" | string
+    filter?: SisenseJaqlFilterItem | any
 }
 
 export type SisenseJaqlDimAggregation = {
-        dim: string,
-        agg: "avg" | "count" | "countduplicates" | "min" | "max" | "median" | "stdev" | "stdevp" | "sum" | "var" | "varp" | string
-        filter?: SisenseJaqlFilterItem | any
+    title?: string,
+    datatype?: string,
+    dim: string,
+    agg: "avg" | "count" | "countduplicates" | "min" | "max" | "median" | "stdev" | "stdevp" | "sum" | "var" | "varp" | string
+    filter?: SisenseJaqlFilterItem | any
 }
 
 export type SisenseJaqlDateAggregation = {
-        dim: string,
-        bucket?: number,
-        level: "years" | "quarters" | "months" | "days" | "hours" | "minutes" | "timestamp" | string
-        agg: "avg" | "count" | "countduplicates" | "min" | "max" | "median" | "stdev" | "stdevp" | "sum" | "var" | "varp" | string
-        filter?: SisenseJaqlFilterItem | any
+    title?: string,
+    datatype?: string,
+    dim: string,
+    bucket?: number,
+    level: "years" | "quarters" | "months" | "days" | "hours" | "minutes" | "timestamp" | string
+    agg: "avg" | "count" | "countduplicates" | "min" | "max" | "median" | "stdev" | "stdevp" | "sum" | "var" | "varp" | string
+    filter?: SisenseJaqlFilterItem | any
 }
 
 export type SisenseJaqlFormulaAggregation = {
-        formula: string,
-        context: any,
-        filter?: SisenseJaqlFilterItem | any
+    title?: string,
+    datatype?: string,
+    formula: string,
+    context: any,
+    filter?: SisenseJaqlFilterItem | any
 }
 
-export type SisenseJaqlFilterItem = 
+export type SisenseJaqlFilterItem =
     SisenseJaqlMemberFilter | SisenseJaqlTextFilter | SisenseJaqlTextFilter | SisenseJaqlMathematicalFilter | SisenseJaqlRelativeDateLastFilter | SisenseJaqlRelativeDateNextFilter | SisenseJaqlTopFilter | SisenseJaqlBottomFilter | SisenseJaqlOrFilter | SisenseJaqlAndFilter
 
 
