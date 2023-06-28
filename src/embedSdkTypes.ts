@@ -17,6 +17,7 @@ export type SisenseDashboardEmbedProps = {
     themeId?: string,
     volatile?: boolean,
     filters?: [SisenseJaqlMetadataItem | any],
+    filtersShouldPersist?: boolean,
     onDashboardLoaded?: (event: any, args: any) => void
     onDashboardFirstLoaded?: (loadedDashboard: any) => void
     unmountShouldDestroySisenseFrame?: boolean

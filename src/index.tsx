@@ -71,8 +71,8 @@ const setFrameWidth = (frameWidth: string, frameElement: HTMLDivElement) => {
     }
 }
 
-const applyFilter = (filters:[SisenseJaqlMetadataItem | any]) => {
-    sisenseFrame.dashboard.applyFilters(filters);
+const applyFilter = (filters:[SisenseJaqlMetadataItem | any], filtersShouldPersist:boolean=false) => {
+    sisenseFrame.dashboard.applyFilters(filters, filtersShouldPersist);
 };
 
 const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbedProps, SisenseDashboardEmbedStates>
@@ -203,7 +203,7 @@ const SisenseDashboardEmbed = class extends React.Component<SisenseDashboardEmbe
             }
         }
         if (this.props.filters !== prevProps.filters) {
-            applyFilter(this.props.filters || [undefined]);
+            applyFilter(this.props.filters || [undefined], this.props.filtersShouldPersist);
         }
     }
 
